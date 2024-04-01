@@ -1,0 +1,173 @@
+[gd_scene load_steps=5 format=3 uid="uid://cr4t16ty6kwpp"]
+
+[ext_resource type="PackedScene" uid="uid://d4i0fb5rduhkq" path="res://2d_rope/nodes/rigid_body_2d.tscn" id="1_a6aj7"]
+[ext_resource type="Script" path="res://2d_rope/scripts/rope_manager.gd" id="1_xjkqt"]
+[ext_resource type="PackedScene" uid="uid://bmqbwwbmdgp4h" path="res://2d_rope/nodes/pin_joint_2d.tscn" id="2_02uxn"]
+[ext_resource type="PackedScene" uid="uid://beno32mdbvlbq" path="res://2d_rope/nodes/static_body_2d.tscn" id="3_8qe5n"]
+
+[node name="Rope" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(594, 324)
+zoom = Vector2(0.595, 0.595)
+
+[node name="RopeGenerator" type="Node2D" parent="."]
+position = Vector2(291, -125)
+script = ExtResource("1_xjkqt")
+start_body_preset = ExtResource("3_8qe5n")
+rigid_body_preset = ExtResource("1_a6aj7")
+joint_preset = ExtResource("2_02uxn")
+resolution = 15
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RopeGenerator" instance=ExtResource("3_8qe5n")]
+position = Vector2(0, -14)
+
+[node name="PinJoint2D" type="PinJoint2D" parent="RopeGenerator" instance=ExtResource("2_02uxn")]
+position = Vector2(0, 82)
+node_a = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/StaticBody2D")
+node_b = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="RopeGenerator" instance=ExtResource("1_a6aj7")]
+position = Vector2(0, 115)
+mass = 0.01
+gravity_scale = 0.01
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="RopeGenerator" instance=ExtResource("2_02uxn")]
+position = Vector2(0, 211)
+node_a = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D")
+node_b = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D2")
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="RopeGenerator" instance=ExtResource("1_a6aj7")]
+position = Vector2(0, 244)
+mass = 0.01
+gravity_scale = 0.01
+
+[node name="PinJoint2D3" type="PinJoint2D" parent="RopeGenerator" instance=ExtResource("2_02uxn")]
+position = Vector2(0, 340)
+node_a = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D2")
+node_b = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D3")
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="RopeGenerator" instance=ExtResource("1_a6aj7")]
+position = Vector2(0, 373)
+mass = 0.01
+gravity_scale = 0.01
+
+[node name="PinJoint2D4" type="PinJoint2D" parent="RopeGenerator" instance=ExtResource("2_02uxn")]
+position = Vector2(0, 469)
+node_a = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D3")
+node_b = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D4")
+
+[node name="RigidBody2D4" type="RigidBody2D" parent="RopeGenerator" instance=ExtResource("1_a6aj7")]
+position = Vector2(0, 502)
+mass = 0.01
+gravity_scale = 0.01
+
+[node name="PinJoint2D5" type="PinJoint2D" parent="RopeGenerator" instance=ExtResource("2_02uxn")]
+position = Vector2(0, 598)
+node_a = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D4")
+node_b = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D5")
+
+[node name="RigidBody2D5" type="RigidBody2D" parent="RopeGenerator" instance=ExtResource("1_a6aj7")]
+position = Vector2(0, 631)
+mass = 0.01
+gravity_scale = 0.01
+
+[node name="PinJoint2D6" type="PinJoint2D" parent="RopeGenerator" instance=ExtResource("2_02uxn")]
+position = Vector2(0, 727)
+node_a = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D5")
+node_b = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D6")
+
+[node name="RigidBody2D6" type="RigidBody2D" parent="RopeGenerator" instance=ExtResource("1_a6aj7")]
+position = Vector2(0, 760)
+mass = 0.01
+gravity_scale = 0.01
+
+[node name="PinJoint2D7" type="PinJoint2D" parent="RopeGenerator" instance=ExtResource("2_02uxn")]
+position = Vector2(0, 856)
+node_a = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D6")
+node_b = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D7")
+
+[node name="RigidBody2D7" type="RigidBody2D" parent="RopeGenerator" instance=ExtResource("1_a6aj7")]
+position = Vector2(0, 889)
+mass = 0.01
+gravity_scale = 0.01
+
+[node name="PinJoint2D8" type="PinJoint2D" parent="RopeGenerator" instance=ExtResource("2_02uxn")]
+position = Vector2(0, 985)
+node_a = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D7")
+node_b = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D8")
+
+[node name="RigidBody2D8" type="RigidBody2D" parent="RopeGenerator" instance=ExtResource("1_a6aj7")]
+position = Vector2(0, 1018)
+mass = 0.01
+gravity_scale = 0.01
+
+[node name="PinJoint2D9" type="PinJoint2D" parent="RopeGenerator" instance=ExtResource("2_02uxn")]
+position = Vector2(0, 1114)
+node_a = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D8")
+node_b = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D9")
+
+[node name="RigidBody2D9" type="RigidBody2D" parent="RopeGenerator" instance=ExtResource("1_a6aj7")]
+position = Vector2(0, 1147)
+mass = 0.01
+gravity_scale = 0.01
+
+[node name="PinJoint2D10" type="PinJoint2D" parent="RopeGenerator" instance=ExtResource("2_02uxn")]
+position = Vector2(0, 1243)
+node_a = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D9")
+node_b = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D10")
+
+[node name="RigidBody2D10" type="RigidBody2D" parent="RopeGenerator" instance=ExtResource("1_a6aj7")]
+position = Vector2(0, 1276)
+mass = 0.01
+gravity_scale = 0.01
+
+[node name="PinJoint2D26" type="PinJoint2D" parent="RopeGenerator" instance=ExtResource("2_02uxn")]
+position = Vector2(0, 1372)
+node_a = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D10")
+node_b = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D26")
+
+[node name="RigidBody2D26" type="RigidBody2D" parent="RopeGenerator" instance=ExtResource("1_a6aj7")]
+position = Vector2(0, 1405)
+mass = 0.01
+gravity_scale = 0.01
+
+[node name="PinJoint2D27" type="PinJoint2D" parent="RopeGenerator" instance=ExtResource("2_02uxn")]
+position = Vector2(0, 1501)
+node_a = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D26")
+node_b = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D27")
+
+[node name="RigidBody2D27" type="RigidBody2D" parent="RopeGenerator" instance=ExtResource("1_a6aj7")]
+position = Vector2(0, 1534)
+mass = 0.01
+gravity_scale = 0.01
+
+[node name="PinJoint2D28" type="PinJoint2D" parent="RopeGenerator" instance=ExtResource("2_02uxn")]
+position = Vector2(0, 1630)
+node_a = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D27")
+node_b = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D28")
+
+[node name="RigidBody2D28" type="RigidBody2D" parent="RopeGenerator" instance=ExtResource("1_a6aj7")]
+position = Vector2(0, 1663)
+mass = 0.01
+gravity_scale = 0.01
+
+[node name="PinJoint2D29" type="PinJoint2D" parent="RopeGenerator" instance=ExtResource("2_02uxn")]
+position = Vector2(0, 1759)
+node_a = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D28")
+node_b = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D29")
+
+[node name="RigidBody2D29" type="RigidBody2D" parent="RopeGenerator" instance=ExtResource("1_a6aj7")]
+position = Vector2(0, 1792)
+mass = 0.01
+gravity_scale = 0.01
+
+[node name="PinJoint2D30" type="PinJoint2D" parent="RopeGenerator" instance=ExtResource("2_02uxn")]
+position = Vector2(0, 1888)
+node_a = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D29")
+node_b = NodePath("/root/@EditorNode@17140/@Panel@13/@VBoxContainer@14/@HSplitContainer@17/@HSplitContainer@25/@HSplitContainer@33/@VBoxContainer@34/@VSplitContainer@36/@VSplitContainer@62/@VBoxContainer@63/@PanelContainer@110/MainScreen/@CanvasItemEditor@9462/@VSplitContainer@9281/@HSplitContainer@9283/@HSplitContainer@9285/@Control@9286/@SubViewportContainer@9287/@SubViewport@9288/Rope/RopeGenerator/RigidBody2D30")
+
+[node name="RigidBody2D30" type="RigidBody2D" parent="RopeGenerator" instance=ExtResource("1_a6aj7")]
+position = Vector2(0, 1921)
+mass = 0.01
+gravity_scale = 0.01

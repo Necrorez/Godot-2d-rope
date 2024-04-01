@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bmqbwwbmdgp4h"]
+
+[node name="PinJoint2D" type="PinJoint2D"]
+position = Vector2(152, -161)
